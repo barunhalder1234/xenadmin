@@ -106,8 +106,8 @@ mkdir_clean ${MICROSOFT_DOTNET_FRAMEWORK_INSTALLER_DIR} && wget ${WGET_OPT} -P "
 mkdir_clean ${PUTTY_DIR} &&  wget ${WGET_OPT} -P "${PUTTY_DIR}" "${WEB_DOTNET}/putty.exe"
 
 #temporarily disabling signing
-#wget ${WGET_OPT} -P "${REPO}" "${WEB_DOTNET}/sign.bat" && chmod a+x ${REPO}/sign.bat
-echo @echo signing disabled > ${REPO}/sign.bat && chmod a+x ${REPO}/sign.bat
+wget ${WGET_OPT} -P "${REPO}" "${WEB_DOTNET}/sign.bat" && chmod a+x ${REPO}/sign.bat
+#echo @echo signing disabled > ${REPO}/sign.bat && chmod a+x ${REPO}/sign.bat
 
 #bring in stuff from xencenter-ovf latest xe-phase-1
 wget ${WGET_OPT} -P "${SCRATCH_DIR}" "${WEB_XE_PHASE_1}/XenCenterOVF.zip"
